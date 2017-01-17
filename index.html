@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>AppWeather</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <main class="row">
+
+        <aside class="col-md-4">
+          <h1 id="city"></h1>
+          <p><strong>En ce moment</strong></p>
+          <p id="weather"></p>
+
+          <p id="description"></p>
+          <table class="table table-condensed">
+            <tr><th>Vent</th><td id="wind"></td></tr>
+            <tr><th>Nuages</th><td id="cloudiness"></td></tr>
+            <tr><th>Pression</th><td id="pressure"></td></tr>
+            <tr><th>Humidité</th><td id="humidity"></td></tr>
+            <tr><th>Levé du soleil</th><td id="sunrise"></td></tr>
+            <tr><th>Couché du soleil</th><td id="sunset"></td></tr>
+            <tr><th>Coordonnée géographiques</th><td id="coords"></td></tr>
+          </table>
+        </aside>
+        <section class="col-md-8">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#hourly" aria-controls="hourly" role="tab" data-toggle="tab">Heures</a></li>
+            <li role="presentation"><a href="#daily" aria-controls="daily" role="tab" data-toggle="tab">Jour</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="hourly"><div id="chart-container-hourly"></div></div>
+
+            <div role="tabpanel" class="tab-pane" id="daily"><div id="chart-container-daily"></div></div>
+
+            <!--<div role="tabpanel" class="tab-pane" id="monthly"><div id="chart-container-monthly"></div></div>-->
+
+          </div>
+
+        </section>
+      </main>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/locale/fr.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="js/script.js"></script>
+
+  </body>
+</html>
